@@ -8,8 +8,8 @@
             "args": [
                 "-g2012",
                 "-o",
-                "${workspaceFolder}\\hello.out",
-                "${workspaceFolder}\\hello.v"
+                "${fileDirname}\\${fileBasenameNoExtension}.out",
+                "${file}"
             ],
             "problemMatcher": []
         },
@@ -18,7 +18,7 @@
             "type": "process",
             "command": "vvp",
             "args": [
-                "${workspaceFolder}\\hello.out"
+                "${fileDirname}\\${fileBasenameNoExtension}.out"
             ],
             "dependsOn": "Kompiluj Verilog",
             "dependsOrder": "sequence",
