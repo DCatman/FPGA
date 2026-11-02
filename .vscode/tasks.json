@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Kompiluj Verilog",
+            "type": "process",
+            "command": "iverilog",
+            "args": [
+                "-g2012",
+                "-o",
+                "${workspaceFolder}\\hello.out",
+                "${workspaceFolder}\\hello.v"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Uruchom symulację",
+            "type": "process",
+            "command": "vvp",
+            "args": [
+                "${workspaceFolder}\\hello.out"
+            ],
+            "dependsOn": "Kompiluj Verilog",
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
