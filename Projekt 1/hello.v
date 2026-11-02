@@ -6,7 +6,7 @@ module arith_unit(
 
     input wire clk, //DONE
     input wire dir, //DONE
-
+//epicki komentarz
 
     output reg [7:0] count, //DONE
     output reg terminal, //DONE
